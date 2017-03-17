@@ -1,6 +1,94 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
+
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
+@import 'resets';
+
+.nav {
+  background: $c-primary;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: .5rem;
+  color: $c-pure-white;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome-card {
+  transform: translate(0, 50%);
+  border: 1px solid $c-secondary-light;
+  border-radius: 0.5rem;
+  color: $c-pure-white;
+  text-align: center;
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.welcome-heading {
+  color: $c-secondary;
+  font-size: 2rem;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.register-btn, .login-btn {
+  padding: .5rem;
+  border-radius: 1rem;
+  background: $c-secondary;
+  color: $c-pure-white;
+  text-decoration: none;
+  width: 8rem;
+
+  &:hover {
+    background: $c-white;
+    color: $c-secondary;
+  }
+}
+
+.register-card {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.create-card {
+  transform: translate(0, 50%);
+  border: 1px solid $c-secondary-light;
+  border-radius: 0.5rem;
+  color: $c-pure-white;
+  text-align: center;
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+.register-heading {
+  color: $c-secondary;
+  font-size: 2rem;
+}

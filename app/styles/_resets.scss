@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: $font;
+  background: $c-white;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  align-self: center;
+  max-width: 100%;
+}
+
+.section {
+  padding: $m-gutter;
+}
+
+.container {
+  max-width: $m-max-width;
+  margin: 0 auto;
+}
