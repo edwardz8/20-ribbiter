@@ -1,0 +1,59 @@
+
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-card {
+  border: 1px solid $c-secondary-light;
+  border-radius: 0.5rem;
+  width: 30rem;
+  margin-top: 2rem;
+}
+
+.card-top {
+  text-align: center;
+  border-bottom: .1rem solid $c-secondary;
+}
+
+.register-heading {
+  color: $c-secondary;
+  font-size: 1.5rem;
+}
+
+.card-mid {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-bottom: .1rem solid $c-secondary;
+}
+
+input {
+  border: 0;
+  border-bottom: .1rem solid $c-secondary;
+  background-color: $c-white;
+  border-radius: .2rem;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.register-btn, .login-btn {
+  padding: .5rem;
+  border-radius: 1rem;
+  background: $c-secondary;
+  color: $c-pure-white;
+  text-decoration: none;
+  text-align: center;
+  width: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    background: $c-white;
+    color: $c-secondary;
+  }
+}

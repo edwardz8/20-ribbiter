@@ -1,0 +1,38 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: calc(100% / 3 - 1rem - 1rem);
+  margin: 1rem;
+}
+
+.users-card {
+  //border: 1px solid $c-secondary-light;
+  border-radius: 0.2rem;
+  width: 16rem;
+  height: 8rem;
+  margin-top: 1rem;
+  background: $c-pure-white;
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.users-card__content {
+  display: flex;
+  padding: 1rem;
+}
+
+.users-pic {
+  width: 6rem;
+  height: 6rem;
+  border-radius: .3rem;
+}
+
+.users-card__info {
+  margin-left: 1rem;
+  margin-top: -1rem;
+}
