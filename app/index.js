@@ -7,6 +7,7 @@ import Index from './routes/index.vue';
 import Register from './routes/register.vue';
 import Login from './routes/login.vue';
 import Users from './routes/users.vue';
+import Ribbits from './routes/ribbits.vue';
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: '/users',
     name: 'users',
     component: Users,
+  },
+  {
+    path: '/ribbits',
+    name: 'ribbits',
+    component: Ribbits,
   },
 ];
 

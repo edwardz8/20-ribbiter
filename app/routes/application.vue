@@ -8,7 +8,7 @@
 
         <div class="nav-right">
           <a href="/" class="nav-item">Ribbits</a>
-          <a href="/second-route" class="nav-item">Frogs</a>
+          <a href="/users" class="nav-item">Frogs</a>
           <a href="/login" class="nav-item">Login</a>
         </div>
       </div>

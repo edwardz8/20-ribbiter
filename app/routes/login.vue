@@ -1,20 +1,18 @@
 <template lang="html">
   <div class="">
     <div class="section">
-      <div class="container">
+      <div class="container loginpage">
         <div class="login">
-          <form class="login-card">
-          <div class="card-top">
           <h4 class="login-heading">Welcome to Ribbiter</h4>
-          </div>
+          <form class="login-card">
           <div class="card-mid">
             <div class="email">
                 <div>Email</div>
-              <input type="text" placeholder="email">
+              <input type="text" placeholder="email" class="email-input">
             </div>
             <div class="password">
                 <div>Password</div>
-              <input type="text" placeholder="password">
+              <input type="text" placeholder="password" class="pw-input">
             </div>
           </div>
           <div class="card-bottom">

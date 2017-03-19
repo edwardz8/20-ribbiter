@@ -20,6 +20,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'register';
 @import 'login';
 @import 'users';
+@import 'ribbits';
 
 .nav {
   background: $c-primary;
@@ -67,7 +68,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
   background: $c-secondary;
   color: $c-pure-white;
   text-decoration: none;
-  width: 8rem;
+  width: 7rem;
 
   &:hover {
     background: $c-white;

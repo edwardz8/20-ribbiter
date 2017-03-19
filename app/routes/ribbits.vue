@@ -1,0 +1,52 @@
+<template lang="html">
+  <div class="">
+    <div class="section">
+      <div class="container">
+        <div class="user-heading">
+          <h2>Recent Ribbits</h2>
+          <hr>
+        </div>
+
+        <div class="grid">
+          <div class="grid__new-post">
+            <div class="new-post">
+              <div class="card-top">
+              <h4 class="register-heading">New Ribbit</h4>
+              </div>
+              <form class="new-post-card">
+              <div class="card-mid">
+                  <div>What's Going On?</div>
+                  <textarea name="name" rows="8" cols="80"></textarea>
+              </div>
+              <div class="card-bottom">
+                <a href="/" class="login-btn">Discard</a>
+                <a href="/post-it" class="register-btn">Post It</a>
+              </div>
+            </form>
+            </div>
+          </div>
+
+
+          <div class="grid__timeline"></div>
+
+        </div>
+</div>
+</div>
+  </div>
+</template>
+
+<script>
+import createResource from '../resources/user';
+const create = createResource.actionCreators.create;
+
+export default {
+  data() {
+    return {
+    };
+  },
+
+  methods: {
+
+  },
+};
+</script>
