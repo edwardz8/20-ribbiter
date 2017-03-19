@@ -5,7 +5,7 @@
 
 .login {
   display: flex;
-  background: $c-pure-white;
+  background: $c-secondary;
   align-items: center;
   justify-content: center;
   border: 1px solid $c-secondary-light;
@@ -23,7 +23,7 @@
 }
 
 .login-heading {
-  color: $c-secondary;
+  color: $c-white;
   font-size: 1.5rem;
 }
 

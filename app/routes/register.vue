@@ -6,22 +6,22 @@
       <h2>There was an error creating this user</h2>
     </div>
         <div class="register">
-          <form class="register-card">
-          <div class="card-top">
+          <form class="register-card" v-on:submit.prevent="create(formValues)">
+
           <h4 class="register-heading">Create an Account</h4>
-          </div>
+
           <div class="card-mid">
             <div class="username">
               <div>Username</div>
-              <input type="text" placeholder="username" v-model="formValues.username">
+              <input class="user-input" type="text" placeholder="username" v-model="formValues.username">
             </div>
             <div class="email">
                 <div>Email</div>
-              <input type="text" placeholder="email" v-model="formValues.email">
+              <input class="user-input" type="text" placeholder="email" v-model="formValues.email">
             </div>
             <div class="password">
                 <div>Password</div>
-              <input type="text" placeholder="password" v-model="formValues.password">
+              <input class="user-input" type="text" placeholder="password" v-model="formValues.password">
             </div>
           </div>
           <div class="card-bottom">
