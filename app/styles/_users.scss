@@ -3,22 +3,15 @@
   flex-wrap: wrap;
 }
 
-.users {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: calc(100% / 3 - 1rem - 1rem);
-  margin: 1rem;
-}
-
 .users-card {
-  //border: 1px solid $c-secondary-light;
+  border: 1px solid $c-secondary-light;
   border-radius: 0.2rem;
-  width: 16rem;
-  height: 8rem;
-  margin-top: 1rem;
+  width: 18rem;
+  height: 10rem;
   background: $c-pure-white;
   box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  flex-basis: calc(100% / 3 - 1rem - 1rem);
 }
 
 .users-card__content {

@@ -37,24 +37,13 @@
               <button class="load-more">Load more posts...</button>
             </div>
 
-              <div class="card-post" v-for="item in items">
+              <div class="card-post">
                 <div class="card-post__info">
                 <a href="" class="rib__name">Ribbiter</a>
-                <div class="rib__post">"This is a "tweet""</div>
+                <div class="rib__post">"This is sorta like a "tweet""</div>
               </div>
               </div>
-              <div class="card-post">
-                <div class="card-post__info">
-                  <a href="" class="rib__name">Ribbiter</a>
-                  <div class="rib__post">"This is a "tweet""</div>
-              </div>
-              </div>
-              <div class="card-post">
-                <ul class="card-post__info">
-                  <a href="" class="rib__name">Ribbiter</a>
-                  <div class="rib__post">"This is a "tweet""</div>
-              </ul>
-              </div>
+
           </form>
           </div>
         </div>
@@ -67,22 +56,23 @@
 <script>
 import createResource from '../resources/posts';
 const create = createResource.actionCreators.create;
-const findAll = createResource.actionCreators.findAll;
 
 export default {
   data() {
     return {
       posts: this.$select('posts'),
-      items: {
-        Username: '',
-        Post: '',
-      }
     };
   },
 
+  created() {
+    const {
+      actionCreators: {
+        findAll
+      }
+    } = createResource;
+    store.dispatch(findAll());
+  },
   methods: {
-      //findAll()
-      //store.dispatch(findAll());
   },
 };
 </script>
