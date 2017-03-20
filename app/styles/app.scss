@@ -35,26 +35,10 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
   font-size: 1.5rem;
   padding: .5rem;
   color: $c-pure-white;
-}
 
-.card {
-  display: flex;
-  justify-content: space-around;
-}
-
-.welcome-card {
-  transform: translate(0, 50%);
-  border: 1px solid $c-secondary-light;
-  border-radius: 0.5rem;
-  color: $c-pure-white;
-  text-align: center;
-  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
-}
-
-.welcome-heading {
+&:hover {
   color: $c-secondary;
-  font-size: 2rem;
+}
 }
 
 .card-bottom {
@@ -74,4 +58,8 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
     background: $c-white;
     color: $c-secondary;
   }
+}
+
+.welcome-text {
+  text-align: center;
 }

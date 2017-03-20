@@ -1,18 +1,20 @@
 <template lang="html">
   <div class="">
     <div class="section">
-      <div class="container">
+      <div class="container loginpage">
 
-        <div class="card">
-          <div class="welcome-card">
-            <div class="card-top">
-            <h4 class="welcome-heading">Welcome to Ribbiter</h4>
-            </div>
-            <div class="card-bottom">
-              <a href="/register" class="register-btn">Register</a>
-              <a href="/login" class="login-btn">Login</a>
-            </div>
+        <div class="login">
+          <h4 class="login-heading">Welcome to Ribbiter</h4>
+          <form class="login-card">
+          <div class="card-mid">
+            <p class="welcome-text">Hop into Ribbiter and see what your friends are into.
+             </p>
           </div>
+          <div class="card-bottom">
+            <a href="/login" class="login-btn">Login</a>
+            <a href="/register" class="login-btn">Register</a>
+          </div>
+        </form>
         </div>
 
       </div>
