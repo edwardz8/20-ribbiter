@@ -32,26 +32,27 @@
             <div class="card-top">
             <h4 class="register-heading">See What's Happening</h4>
             </div>
-            <form class="post-timeline__form">
+            <form class="timeline__form">
               <div class="load-posts-section">
               <button class="load-more">Load more posts...</button>
             </div>
-              <div class="card-post">
+
+              <div class="card-post" v-for="item in items">
                 <div class="card-post__info">
-                <a href="">Ribbiter</a>
-                <div>"This is a "tweet""</div>
+                <a href="" class="rib__name">Ribbiter</a>
+                <div class="rib__post">"This is a "tweet""</div>
               </div>
               </div>
               <div class="card-post">
                 <div class="card-post__info">
-                <a href="">Ribbiter</a>
-                <div>"This is a "tweet""</div>
+                  <a href="" class="rib__name">Ribbiter</a>
+                  <div class="rib__post">"This is a "tweet""</div>
               </div>
               </div>
               <div class="card-post">
                 <ul class="card-post__info">
-                <li><a href="">Ribbiter</a></li>
-                <li>"This is a "tweet""</li>
+                  <a href="" class="rib__name">Ribbiter</a>
+                  <div class="rib__post">"This is a "tweet""</div>
               </ul>
               </div>
           </form>
@@ -64,17 +65,24 @@
 </template>
 
 <script>
-import createResource from '../resources/user';
+import createResource from '../resources/posts';
 const create = createResource.actionCreators.create;
+const findAll = createResource.actionCreators.findAll;
 
 export default {
   data() {
     return {
+      posts: this.$select('posts'),
+      items: {
+        Username: '',
+        Post: '',
+      }
     };
   },
 
   methods: {
-
+      //findAll()
+      //store.dispatch(findAll());
   },
 };
 </script>
