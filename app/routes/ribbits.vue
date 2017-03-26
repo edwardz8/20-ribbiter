@@ -13,15 +13,15 @@
               <div class="card-top">
               <h4 class="register-heading">New Ribbit</h4>
               </div>
-              <form class="new-post-form">
+              <form class="new-post-form" v-on:submit.prevent="submit(formValues)">
               <div class="card-mid">
                   <div>What's Going On?</div>
                   <textarea name="name" rows="8" cols="80"
-                  class="textarea-edit"></textarea>
+                  class="textarea-edit" v-model="formValues.body"></textarea>
               </div>
               <div class="card-bottom">
                 <a href="/" class="login-btn">Discard</a>
-                <a href="/post-it" class="register-btn">Post It</a>
+                <button class="register-btn">Post It</button>
               </div>
             </form>
             </div>
@@ -37,12 +37,12 @@
               <button class="load-more">Load more posts...</button>
             </div>
 
-              <div class="card-post">
+              <div class="card-post" v-for="post in posts.items">
                 <div class="card-post__info">
-                <a href="" class="rib__name">Ribbiter</a>
-                <div class="rib__post">"This is sorta like a "tweet""</div>
+                <a href="" class="rib__name">{{ post.user.username }}</a>
+                <div class="rib__post">{{ post.body }}</div>
               </div>
-              </div>
+            </div>
 
           </form>
           </div>
@@ -54,25 +54,53 @@
 </template>
 
 <script>
-import createResource from '../resources/posts';
-const create = createResource.actionCreators.create;
+import store from '../store';
+import postResource from '../resources/posts';
+const {
+  actionCreators: {
+    findAll
+  }
+} = postResource;
 
 export default {
   data() {
     return {
       posts: this.$select('posts'),
+      formValues: {
+        body: ''
+      },
     };
   },
 
-  created() {
-    const {
-      actionCreators: {
-        findAll
-      }
-    } = createResource;
+  mounted() {
     store.dispatch(findAll());
   },
   methods: {
+    created() {
+      const {
+        actionCreators: {
+          findAll
+        }
+      } = postResource;
+      store.dispatch(findAll());
+    },
+
+    clear() {
+      this.formValues = {
+        body: ''
+      };
+    },
+
+    submit() {
+      const {
+        actionCreators: {
+          create
+        }
+      } = postResource;
+      store.dispatch(create(this.formValues)).then(() => {
+        this.clear();
+      });
+    }
   },
 };
 </script>
