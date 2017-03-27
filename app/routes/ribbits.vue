@@ -39,6 +39,7 @@
 
               <div class="card-post" v-for="post in posts.items">
                 <div class="card-post__info">
+                  <img src="" alt="" class="post__img">
                 <a href="" class="rib__name">{{ post.user.username }}</a>
                 <div class="rib__post">{{ post.body }}</div>
               </div>
