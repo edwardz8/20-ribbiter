@@ -25,8 +25,9 @@
             </div>
           </div>
           <div class="card-bottom">
-            <a href="/login" class="login-btn">Login</a>
-            <a href="/register" class="register-btn">Register</a>
+             <router-link :to="{ name: 'login' }" class="login-btn">Login</router-link>
+
+            <router-link :to="{ name: 'login' }"><button type="submit" class="register-btn">Register</button></router-link>
           </div>
         </form>
         </div>
@@ -41,7 +42,7 @@ import createResource from '../resources/user';
 const create = createResource.actionCreators.create;
 
 export default {
-
+  name: 'Register',
   data() {
     return {
         users: this.$select('users'),
@@ -54,7 +55,7 @@ export default {
   },
 
   methods: {
-    create() {
+    submit() {
       //Dispatch a new create action
       store.dispatch(actionCreators(this.formValues))
       .then(() => {
