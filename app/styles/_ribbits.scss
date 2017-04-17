@@ -1,0 +1,109 @@
+
+
+.grid {
+  display: flex;
+}
+
+.grid-item {
+  margin: 1rem;
+  flex-grow: 0;
+}
+
+  .new-post-left {
+    flex-basis: calc(30%);
+  }
+
+  .timeline {
+    flex-basis: calc(60%);
+  }
+
+.new-post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $c-secondary-light;
+  border-radius: .2rem;
+  min-width: 20rem;
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-top {
+  background: $c-secondary;
+  padding: .5rem;
+}
+
+.register-heading {
+  color: $c-white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+textarea {
+  border: 0;
+  border-bottom: .1rem solid $c-secondary;
+  border-radius: .2rem;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.textarea-edit {
+  border-bottom: .1rem solid $c-secondary;
+}
+
+.register-btn, .login-btn {
+  padding: .5rem;
+  border-radius: 1rem;
+  background: $c-secondary;
+  color: $c-pure-white;
+  text-decoration: none;
+  text-align: center;
+  width: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    background: $c-white;
+    color: $c-secondary;
+  }
+}
+
+// Right Side of Grid
+
+.post__timeline {
+  border: 1px solid $c-secondary-light;
+  border-radius: .2rem;
+  min-width: 20rem;
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.load-posts-section {
+    border-bottom: 1px solid $c-secondary-light;
+    margin: 0;
+    padding: 1rem;
+}
+
+.load-more {
+  width: 100%;
+  padding: .5rem;
+  color: $c-secondary-light;
+  background: $c-white;
+  font-size: 1rem;
+  border: .1rem solid $c-secondary;
+  outline: none;
+
+  &:hover {
+    color: $c-secondary;
+    background: $c-pure-white;
+  }
+}
+
+.card-post {
+  border-bottom: .1rem solid $c-secondary;
+  padding: 1rem;
+
+&__info {
+margin: .5rem;
+}
+}
